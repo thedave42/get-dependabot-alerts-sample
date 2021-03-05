@@ -42,7 +42,7 @@ async function DumpDependabotAlerts() {
     }`
 
   try {
-    console.log("org,repo,package,ecosystem,summary,severity,permalink")
+    console.log("org,repo,ecosystem,packageName,version,hasDependencies")
     let hasNextPage = false
     do {
       const getDepsResult = await graphql({ query, org: org, repo: repo, cursor: pagination })
